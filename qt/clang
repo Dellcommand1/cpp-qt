@@ -1,0 +1,11 @@
+#include <QtWidgets/qapplication.h>
+#include <QtWidgets/qpushbutton.h>
+void _03_basic_qt()
+{
+    int argc = 0;
+    QApplication app(argc, nullptr);
+    QPushButton button("Hello world");
+    QObject::connect(&button, &QPushButton::pressed, &app, &QApplication::quit);
+    button.show();
+    app.exec();
+}
